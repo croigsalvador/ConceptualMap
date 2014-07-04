@@ -19,6 +19,13 @@
 		1D764CE41967114F00AA80B8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D764CCC1967114F00AA80B8 /* UIKit.framework */; };
 		1D764CEC1967114F00AA80B8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D764CEA1967114F00AA80B8 /* InfoPlist.strings */; };
 		1D764CEE1967114F00AA80B8 /* ConceptualMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D764CED1967114F00AA80B8 /* ConceptualMapTests.m */; };
+		1D764D001967120D00AA80B8 /* CRMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D764CFF1967120D00AA80B8 /* CRMap.m */; };
+		1D764D031967132B00AA80B8 /* CRFigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D764D021967132B00AA80B8 /* CRFigure.m */; };
+		1D764D071967164000AA80B8 /* CRSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D764D061967164000AA80B8 /* CRSquare.m */; };
+		1D764D0B1967199F00AA80B8 /* CRCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D764D0A1967199F00AA80B8 /* CRCircle.m */; };
+		1D764D0F19671CC400AA80B8 /* WorkSpace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D764D0E19671CC400AA80B8 /* WorkSpace.storyboard */; };
+		1D764D1219671D1F00AA80B8 /* CRMapWorkSapceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D764D1119671D1F00AA80B8 /* CRMapWorkSapceViewController.m */; };
+		1D764D1519671EF600AA80B8 /* CRCustomFigureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D764D1419671EF600AA80B8 /* CRCustomFigureView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +55,20 @@
 		1D764CE91967114F00AA80B8 /* ConceptualMapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ConceptualMapTests-Info.plist"; sourceTree = "<group>"; };
 		1D764CEB1967114F00AA80B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D764CED1967114F00AA80B8 /* ConceptualMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConceptualMapTests.m; sourceTree = "<group>"; };
+		1D764CFE1967120D00AA80B8 /* CRMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRMap.h; sourceTree = "<group>"; };
+		1D764CFF1967120D00AA80B8 /* CRMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRMap.m; sourceTree = "<group>"; };
+		1D764D011967132B00AA80B8 /* CRFigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRFigure.h; sourceTree = "<group>"; };
+		1D764D021967132B00AA80B8 /* CRFigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRFigure.m; sourceTree = "<group>"; };
+		1D764D04196714DC00AA80B8 /* CRFigureProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRFigureProtocol.h; sourceTree = "<group>"; };
+		1D764D051967164000AA80B8 /* CRSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRSquare.h; sourceTree = "<group>"; };
+		1D764D061967164000AA80B8 /* CRSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRSquare.m; sourceTree = "<group>"; };
+		1D764D091967199F00AA80B8 /* CRCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRCircle.h; sourceTree = "<group>"; };
+		1D764D0A1967199F00AA80B8 /* CRCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRCircle.m; sourceTree = "<group>"; };
+		1D764D0E19671CC400AA80B8 /* WorkSpace.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WorkSpace.storyboard; sourceTree = "<group>"; };
+		1D764D1019671D1F00AA80B8 /* CRMapWorkSapceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRMapWorkSapceViewController.h; sourceTree = "<group>"; };
+		1D764D1119671D1F00AA80B8 /* CRMapWorkSapceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRMapWorkSapceViewController.m; sourceTree = "<group>"; };
+		1D764D1319671EF600AA80B8 /* CRCustomFigureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRCustomFigureView.h; sourceTree = "<group>"; };
+		1D764D1419671EF600AA80B8 /* CRCustomFigureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRCustomFigureView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,9 +128,8 @@
 		1D764CCE1967114F00AA80B8 /* ConceptualMap */ = {
 			isa = PBXGroup;
 			children = (
-				1D764CD71967114F00AA80B8 /* CRAppDelegate.h */,
-				1D764CD81967114F00AA80B8 /* CRAppDelegate.m */,
-				1D764CDA1967114F00AA80B8 /* Images.xcassets */,
+				1D764CF81967116900AA80B8 /* Classes */,
+				1D764CFD196711CA00AA80B8 /* Resources */,
 				1D764CCF1967114F00AA80B8 /* Supporting Files */,
 			);
 			path = ConceptualMap;
@@ -142,6 +162,85 @@
 				1D764CEA1967114F00AA80B8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1D764CF71967115F00AA80B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1D764CFE1967120D00AA80B8 /* CRMap.h */,
+				1D764CFF1967120D00AA80B8 /* CRMap.m */,
+				1D764D081967198700AA80B8 /* Figures */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1D764CF81967116900AA80B8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1D764CF91967117500AA80B8 /* Common */,
+				1D764CFC1967119500AA80B8 /* AppDelegate */,
+				1D764CFA1967118300AA80B8 /* Controller */,
+				1D764CF71967115F00AA80B8 /* Model */,
+				1D764CFB1967118B00AA80B8 /* View */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1D764CF91967117500AA80B8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		1D764CFA1967118300AA80B8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1D764D1019671D1F00AA80B8 /* CRMapWorkSapceViewController.h */,
+				1D764D1119671D1F00AA80B8 /* CRMapWorkSapceViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		1D764CFB1967118B00AA80B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D764D0E19671CC400AA80B8 /* WorkSpace.storyboard */,
+				1D764D1319671EF600AA80B8 /* CRCustomFigureView.h */,
+				1D764D1419671EF600AA80B8 /* CRCustomFigureView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1D764CFC1967119500AA80B8 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				1D764CD71967114F00AA80B8 /* CRAppDelegate.h */,
+				1D764CD81967114F00AA80B8 /* CRAppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		1D764CFD196711CA00AA80B8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1D764CDA1967114F00AA80B8 /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1D764D081967198700AA80B8 /* Figures */ = {
+			isa = PBXGroup;
+			children = (
+				1D764D011967132B00AA80B8 /* CRFigure.h */,
+				1D764D021967132B00AA80B8 /* CRFigure.m */,
+				1D764D04196714DC00AA80B8 /* CRFigureProtocol.h */,
+				1D764D051967164000AA80B8 /* CRSquare.h */,
+				1D764D061967164000AA80B8 /* CRSquare.m */,
+				1D764D091967199F00AA80B8 /* CRCircle.h */,
+				1D764D0A1967199F00AA80B8 /* CRCircle.m */,
+			);
+			name = Figures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D764CD31967114F00AA80B8 /* InfoPlist.strings in Resources */,
+				1D764D0F19671CC400AA80B8 /* WorkSpace.storyboard in Resources */,
 				1D764CDB1967114F00AA80B8 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,8 +340,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D764D031967132B00AA80B8 /* CRFigure.m in Sources */,
+				1D764D001967120D00AA80B8 /* CRMap.m in Sources */,
 				1D764CD51967114F00AA80B8 /* main.m in Sources */,
 				1D764CD91967114F00AA80B8 /* CRAppDelegate.m in Sources */,
+				1D764D1519671EF600AA80B8 /* CRCustomFigureView.m in Sources */,
+				1D764D1219671D1F00AA80B8 /* CRMapWorkSapceViewController.m in Sources */,
+				1D764D0B1967199F00AA80B8 /* CRCircle.m in Sources */,
+				1D764D071967164000AA80B8 /* CRSquare.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
