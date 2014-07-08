@@ -38,26 +38,44 @@
 }
 
 - (void)lightSelectedView {
-    self.selectedView.alpha = 0.5;
+    self.selectedView.alpha = 0.8;
 }
 
 - (void)unLightSelectedView {
     self.selectedView.alpha = 1.0;
 }
 
+- (void)createFigure {
+    CRFigure *figure = [[CRSquare alloc]init];
+    
+    [self unLightSelectedView];
+    self.selectedView = [self createViewWithFigure:figure];
+    [self addPinchGestureToSelectedView];
+    [self lightSelectedView];
+}
+
+- (UIView *)createViewWithFigure:(CRFigure *)figure {
+    CGRect figureFrame = CGRectMake(figure.position.x, figure.position.y, figure.size.width, figure.size.height);
+    CRCustomFigureView *figureView = [[CRCustomFigureView alloc] initWithFrame:figureFrame];
+    figureView.backgroundColor = figure.color;
+    [figureView addSubview:[self textViewForFigure:figureFrame.size]];
+    return figureView;
+}
+
+- (UITextView *)textViewForFigure:(CGSize)figureSize {
+    CGRect textFrame = CGRectMake(0, 0, figureSize.width, figureSize.height);
+    UITextView *figureTextView = [[UITextView alloc] initWithFrame:CGRectInset(textFrame, 10, 20)];
+    figureTextView.editable = YES;
+    figureTextView.backgroundColor = [UIColor whiteColor];
+    NSLog(@"TextView: %@", NSStringFromCGRect(figureTextView.frame));
+    return figureTextView;
+}
+
 
 #pragma mark - IBAction Methods
 
 - (IBAction)addFigureToViewPressed:(UIBarButtonItem *)sender {
-    CRFigure *figure = [[CRSquare alloc]init];
-    
-    CGRect figureFrame = CGRectMake(figure.position.x, figure.position.y, figure.size.width, figure.size.height);
-    
-    CRCustomFigureView *figureView = [[CRCustomFigureView alloc] initWithFrame:figureFrame];
-    figureView.backgroundColor = figure.color;
-    self.selectedView = figureView;
-    
-    
+    [self createFigure];
     [self.view addSubview:self.selectedView];
 }
 
@@ -68,6 +86,14 @@
         self.selectedView.backgroundColor = [UIColor flatCarrotColor];
     }
 }
+- (IBAction)zoomSteepedPressed:(UIStepper *)sender {
+    static float initialDifferenceZoom = 0.0;
+    static float oldScaleZoom = 1.0;
+    
+    CGFloat scale = oldScaleZoom - (oldScaleZoom - sender.value) + initialDifferenceZoom;
+    self.view.transform = CGAffineTransformScale(self.view.transform, scale, scale);
+    oldScaleZoom = scale;
+}
 
 #pragma mark - Touch Methods
 
@@ -75,16 +101,14 @@
     if ([touches count] == 1) {
         UITouch *touch = [touches anyObject];
         CGPoint touchPoint = [touch locationInView:self.view];
-        self.currentTouch = touchPoint;
+        //        self.currentTouch = touchPoint;
         
-        for (UIView *view in [self.view subviews]) {
-            if ([view isKindOfClass:[CRCustomFigureView class]]) {
-                if (CGRectContainsPoint(view.frame, touchPoint)) {
-                    [self unLightSelectedView];
-                    self.selectedView = view;
-                    [self lightSelectedView];
-                    return;
-                }
+        for (CRCustomFigureView *view in [self.view subviews]) {
+            if (CGRectContainsPoint(view.frame, touchPoint)) {
+                [self unLightSelectedView];
+                self.selectedView = view;
+                [self lightSelectedView];
+                return;
             }
         }
     }
@@ -94,15 +118,20 @@
     UITouch *touch = [touches anyObject];
     self.currentTouch = [touch locationInView:self.view];
     self.selectedView.center = self.currentTouch;
+//    for (CRCustomFigureView *view in [self.view subviews]) {
+//        if ([self.selectedView isEqual:view]) {
+//            CGPoint selectPoint = [touch locationInView:view];
+//            self.selectedView.center = selectPoint;
+//        }
+//    }
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
     self.currentTouch = [touch locationInView:self.view];
-    self.selectedView.center = self.currentTouch;
 }
 
-#pragma mark - Transform Views 
+#pragma mark - Transform Views
 
 - (void)handlePinchGesture:(UIPinchGestureRecognizer *)recognizer {
     
@@ -114,9 +143,7 @@
     }
     
     CGFloat scale = oldScale - (oldScale - recognizer.scale) + initialDifference;
-    
     self.selectedView.transform = CGAffineTransformScale(self.view.transform, scale, scale);
-    
     oldScale = scale;
     
 }

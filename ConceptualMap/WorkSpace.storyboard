@@ -60,6 +60,13 @@
                                             <action selector="changeColorOfSelectedView:" destination="qIa-DP-Tdg" eventType="touchUpInside" id="fkT-hh-5na"/>
                                         </connections>
                                     </button>
+                                    <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="mbd-Uz-Nor">
+                                        <rect key="frame" x="27" y="525" width="94" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <connections>
+                                            <action selector="zoomSteepedPressed:" destination="qIa-DP-Tdg" eventType="valueChanged" id="uww-Dq-ekg"/>
+                                        </connections>
+                                    </stepper>
                                 </subviews>
                                 <color key="backgroundColor" red="0.81988853216171265" green="0.81998765468597412" blue="0.81985491514205933" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
