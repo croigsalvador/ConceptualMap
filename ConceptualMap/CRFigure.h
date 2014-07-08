@@ -13,6 +13,7 @@
 
 @property (assign,nonatomic) CGPoint position;
 @property (assign,nonatomic) CGSize size;
-@property (strong, nonatomic) UIColor *color;
+@property (strong,nonatomic) UIColor *color;
+@property (strong,nonatomic) NSString *text;
 
 @end

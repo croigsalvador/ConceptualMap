@@ -8,8 +8,8 @@
 
 #import "CRFigure.h"
 
-static CGPoint   const kDefaultPosition           = { 100.0f, 100.0f };
-static CGSize   const kDefaultSize               = { 100.0f, 100.0f };
+static CGPoint  const kDefaultPosition            = { 200.0f, 200.0f };
+static CGSize   const kDefaultSize                = { 150.0f, 60.0f };
 
 @implementation CRFigure
 

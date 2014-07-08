@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D6ECC88196B21D400A81111 /* CRBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6ECC87196B21D400A81111 /* CRBezierPath.m */; };
 		1D764CC91967114F00AA80B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D764CC81967114F00AA80B8 /* Foundation.framework */; };
 		1D764CCB1967114F00AA80B8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D764CCA1967114F00AA80B8 /* CoreGraphics.framework */; };
 		1D764CCD1967114F00AA80B8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D764CCC1967114F00AA80B8 /* UIKit.framework */; };
@@ -26,6 +27,7 @@
 		1D764D0F19671CC400AA80B8 /* WorkSpace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D764D0E19671CC400AA80B8 /* WorkSpace.storyboard */; };
 		1D764D1219671D1F00AA80B8 /* CRMapWorkSapceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D764D1119671D1F00AA80B8 /* CRMapWorkSapceViewController.m */; };
 		1D764D1519671EF600AA80B8 /* CRCustomFigureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D764D1419671EF600AA80B8 /* CRCustomFigureView.m */; };
+		A4870F5FF1EA4BF48ED44A53 /* libPods-ConceptualMap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BE39A5AC06451BAB0FC536 /* libPods-ConceptualMap.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1807E661EEC14BC7B5BB325B /* Pods-ConceptualMap.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConceptualMap.xcconfig"; path = "Pods/Pods-ConceptualMap.xcconfig"; sourceTree = "<group>"; };
+		1D6ECC86196B21D400A81111 /* CRBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRBezierPath.h; sourceTree = "<group>"; };
+		1D6ECC87196B21D400A81111 /* CRBezierPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRBezierPath.m; sourceTree = "<group>"; };
 		1D764CC51967114F00AA80B8 /* ConceptualMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConceptualMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D764CC81967114F00AA80B8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D764CCA1967114F00AA80B8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -69,6 +74,7 @@
 		1D764D1119671D1F00AA80B8 /* CRMapWorkSapceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRMapWorkSapceViewController.m; sourceTree = "<group>"; };
 		1D764D1319671EF600AA80B8 /* CRCustomFigureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRCustomFigureView.h; sourceTree = "<group>"; };
 		1D764D1419671EF600AA80B8 /* CRCustomFigureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRCustomFigureView.m; sourceTree = "<group>"; };
+		F9BE39A5AC06451BAB0FC536 /* libPods-ConceptualMap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConceptualMap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,7 @@
 				1D764CCB1967114F00AA80B8 /* CoreGraphics.framework in Frameworks */,
 				1D764CCD1967114F00AA80B8 /* UIKit.framework in Frameworks */,
 				1D764CC91967114F00AA80B8 /* Foundation.framework in Frameworks */,
+				A4870F5FF1EA4BF48ED44A53 /* libPods-ConceptualMap.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +109,7 @@
 				1D764CE71967114F00AA80B8 /* ConceptualMapTests */,
 				1D764CC71967114F00AA80B8 /* Frameworks */,
 				1D764CC61967114F00AA80B8 /* Products */,
+				1807E661EEC14BC7B5BB325B /* Pods-ConceptualMap.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +129,7 @@
 				1D764CCA1967114F00AA80B8 /* CoreGraphics.framework */,
 				1D764CCC1967114F00AA80B8 /* UIKit.framework */,
 				1D764CE11967114F00AA80B8 /* XCTest.framework */,
+				F9BE39A5AC06451BAB0FC536 /* libPods-ConceptualMap.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -208,6 +217,8 @@
 				1D764D0E19671CC400AA80B8 /* WorkSpace.storyboard */,
 				1D764D1319671EF600AA80B8 /* CRCustomFigureView.h */,
 				1D764D1419671EF600AA80B8 /* CRCustomFigureView.m */,
+				1D6ECC86196B21D400A81111 /* CRBezierPath.h */,
+				1D6ECC87196B21D400A81111 /* CRBezierPath.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -250,9 +261,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D764CF11967114F00AA80B8 /* Build configuration list for PBXNativeTarget "ConceptualMap" */;
 			buildPhases = (
+				B87C60800EA141FCBEC7C8DC /* Check Pods Manifest.lock */,
 				1D764CC11967114F00AA80B8 /* Sources */,
 				1D764CC21967114F00AA80B8 /* Frameworks */,
 				1D764CC31967114F00AA80B8 /* Resources */,
+				6176D01014AA40FBBBED2579 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -335,6 +348,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6176D01014AA40FBBBED2579 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-ConceptualMap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B87C60800EA141FCBEC7C8DC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1D764CC11967114F00AA80B8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -343,6 +389,7 @@
 				1D764D031967132B00AA80B8 /* CRFigure.m in Sources */,
 				1D764D001967120D00AA80B8 /* CRMap.m in Sources */,
 				1D764CD51967114F00AA80B8 /* main.m in Sources */,
+				1D6ECC88196B21D400A81111 /* CRBezierPath.m in Sources */,
 				1D764CD91967114F00AA80B8 /* CRAppDelegate.m in Sources */,
 				1D764D1519671EF600AA80B8 /* CRCustomFigureView.m in Sources */,
 				1D764D1219671D1F00AA80B8 /* CRMapWorkSapceViewController.m in Sources */,
@@ -421,7 +468,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -454,7 +501,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
@@ -463,26 +510,34 @@
 		};
 		1D764CF21967114F00AA80B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1807E661EEC14BC7B5BB325B /* Pods-ConceptualMap.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ConceptualMap/ConceptualMap-Prefix.pch";
 				INFOPLIST_FILE = "ConceptualMap/ConceptualMap-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		1D764CF31967114F00AA80B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1807E661EEC14BC7B5BB325B /* Pods-ConceptualMap.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ConceptualMap/ConceptualMap-Prefix.pch";
 				INFOPLIST_FILE = "ConceptualMap/ConceptualMap-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -546,6 +601,7 @@
 				1D764CF31967114F00AA80B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D764CF41967114F00AA80B8 /* Build configuration list for PBXNativeTarget "ConceptualMapTests" */ = {
 			isa = XCConfigurationList;
@@ -554,6 +610,7 @@
 				1D764CF61967114F00AA80B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
