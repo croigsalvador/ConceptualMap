@@ -10,6 +10,7 @@
 #import "CRCircle.h"
 #import "CRSquare.h"
 #import "CRCustomFigureView.h"
+#import <UIColor+FlatColors.h>
 
 @interface CRMapWorkSapceViewController ()<UIDynamicAnimatorDelegate, UIGestureRecognizerDelegate>
 
@@ -46,7 +47,9 @@
 }
 
 - (void)createFigure {
-    CRFigure *figure = [[CRSquare alloc]init];
+    CGPoint figurePosition = self.view.center;
+    CGSize figureSize = CGSizeMake(100, 100);
+    CRFigure *figure = [[CRSquare alloc]initWithPosition:figurePosition size:figureSize andColor:[UIColor redColor]];
     
     [self unLightSelectedView];
     self.selectedView = [self createViewWithFigure:figure];
@@ -58,7 +61,6 @@
     CGRect figureFrame = CGRectMake(figure.position.x, figure.position.y, figure.size.width, figure.size.height);
     CRCustomFigureView *figureView = [[CRCustomFigureView alloc] initWithFrame:figureFrame];
     figureView.backgroundColor = figure.color;
-    [figureView addSubview:[self textViewForFigure:figureFrame.size]];
     return figureView;
 }
 
@@ -86,6 +88,7 @@
         self.selectedView.backgroundColor = [UIColor flatCarrotColor];
     }
 }
+
 - (IBAction)zoomSteepedPressed:(UIStepper *)sender {
     static float initialDifferenceZoom = 0.0;
     static float oldScaleZoom = 1.0;
@@ -93,6 +96,14 @@
     CGFloat scale = oldScaleZoom - (oldScaleZoom - sender.value) + initialDifferenceZoom;
     self.view.transform = CGAffineTransformScale(self.view.transform, scale, scale);
     oldScaleZoom = scale;
+}
+
+- (IBAction)addTextViewToSelectedFigure:(UIButton *)sender {
+    [self.selectedView addSubview:[self textViewForFigure:self.selectedView.frame.size]];
+}
+
+- (IBAction)removeSelectedView:(UIButton *)sender {
+    [self.selectedView removeFromSuperview];
 }
 
 #pragma mark - Touch Methods
@@ -118,12 +129,12 @@
     UITouch *touch = [touches anyObject];
     self.currentTouch = [touch locationInView:self.view];
     self.selectedView.center = self.currentTouch;
-//    for (CRCustomFigureView *view in [self.view subviews]) {
-//        if ([self.selectedView isEqual:view]) {
-//            CGPoint selectPoint = [touch locationInView:view];
-//            self.selectedView.center = selectPoint;
-//        }
-//    }
+    //    for (CRCustomFigureView *view in [self.view subviews]) {
+    //        if ([self.selectedView isEqual:view]) {
+    //            CGPoint selectPoint = [touch locationInView:view];
+    //            self.selectedView.center = selectPoint;
+    //        }
+    //    }
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {

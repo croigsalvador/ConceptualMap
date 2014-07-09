@@ -16,4 +16,6 @@
 @property (strong,nonatomic) UIColor *color;
 @property (strong,nonatomic) NSString *text;
 
+- (instancetype)initWithPosition:(CGPoint)position size:(CGSize)size andColor:(UIColor *)color;
+
 @end
