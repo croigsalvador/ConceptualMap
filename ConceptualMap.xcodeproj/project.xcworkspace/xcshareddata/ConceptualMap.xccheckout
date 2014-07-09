@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>23520FC1-D430-4330-8E52-1C0C735E8C37</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ConceptualMap</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>36B2B324-53DB-48B3-93F8-D37AC41631F0</key>
+		<string>https://github.com/croigsalvador/ConceptualMap.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ConceptualMap.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>36B2B324-53DB-48B3-93F8-D37AC41631F0</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/croigsalvador/ConceptualMap.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>36B2B324-53DB-48B3-93F8-D37AC41631F0</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>36B2B324-53DB-48B3-93F8-D37AC41631F0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ConceptualMap</string>
+		</dict>
+	</array>
+</dict>
+</plist>
