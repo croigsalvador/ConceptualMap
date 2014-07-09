@@ -15,6 +15,10 @@
  *  comentario
  */
 
+/**
+ *   asfasfsaf 
+ */
+
 @interface CRMapWorkSapceViewController ()<UIDynamicAnimatorDelegate, UIGestureRecognizerDelegate>
 
 @property (nonatomic, assign) CGPoint currentTouch;
