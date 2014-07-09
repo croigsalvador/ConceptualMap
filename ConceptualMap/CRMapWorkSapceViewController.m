@@ -12,6 +12,10 @@
 #import "CRCustomFigureView.h"
 #import <UIColor+FlatColors.h>
 
+/**
+ *   asfasfsaf 
+ */
+
 @interface CRMapWorkSapceViewController ()<UIDynamicAnimatorDelegate, UIGestureRecognizerDelegate>
 
 @property (nonatomic, assign) CGPoint currentTouch;
