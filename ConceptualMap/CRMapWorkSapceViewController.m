@@ -40,7 +40,7 @@
 }
 
 - (void)lightSelectedView {
-    self.selectedView.alpha = 0.8;
+    self.selectedView.alpha = 0.6;
 }
 
 - (void)unLightSelectedView {
@@ -110,6 +110,7 @@
 #pragma mark - Touch Methods
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
     if ([touches count] == 1) {
         UITouch *touch = [touches anyObject];
         CGPoint touchPoint = [touch locationInView:self.view];
