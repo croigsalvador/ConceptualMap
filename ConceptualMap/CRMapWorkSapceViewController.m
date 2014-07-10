@@ -11,13 +11,7 @@
 #import "CRSquare.h"
 #import "CRCustomFigureView.h"
 #import <UIColor+FlatColors.h>
-/**
- *  comentario
- */
 
-/**
- *   asfasfsaf 
- */
 
 @interface CRMapWorkSapceViewController ()<UIDynamicAnimatorDelegate, UIGestureRecognizerDelegate>
 
