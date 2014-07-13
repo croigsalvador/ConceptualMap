@@ -10,4 +10,7 @@
 
 @interface CRCustomFigureView : UIView
 
+@property (strong,nonatomic) UILabel * titleLabel;
+@property (strong,nonatomic) UILabel * textLabel;
+
 @end

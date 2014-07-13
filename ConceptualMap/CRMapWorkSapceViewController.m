@@ -66,6 +66,9 @@ static CGSize kScrollViewContainerSize                  = {2040.0f, 2040.0f};
 - (void)setupContainerView {
     self.containerView = [[UIView alloc] initWithFrame:(CGRect){.origin=CGPointMake(0.0f, 0.0f), .size=kScrollViewContainerSize}];
     self.containerView.backgroundColor = [UIColor blueColor];
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleTapGesture:)];
+    tapGesture.numberOfTapsRequired = 1;
+    [self.containerView addGestureRecognizer:tapGesture];
     [self.scrollView addSubview:self.containerView];
 }
 
@@ -113,7 +116,7 @@ static CGSize kScrollViewContainerSize                  = {2040.0f, 2040.0f};
 
 - (void)createFigure {
     CGPoint figurePosition = self.view.center;
-    CGSize figureSize = CGSizeMake(100, 100);
+    CGSize figureSize = CGSizeMake(200, 200);
     CRFigure *figure = [[CRSquare alloc]initWithPosition:figurePosition size:figureSize andColor:[UIColor redColor]];
     
     [self unLightSelectedView];
@@ -124,8 +127,10 @@ static CGSize kScrollViewContainerSize                  = {2040.0f, 2040.0f};
 
 - (UIView *)createViewWithFigure:(CRFigure *)figure {
     CGRect figureFrame = CGRectMake(figure.position.x, figure.position.y, figure.size.width, figure.size.height);
-    CRCircleFigureView *figureView = [[CRCircleFigureView alloc] initWithFrame:figureFrame];
+    CRCustomFigureView *figureView = [[CRCircleFigureView alloc] initWithFrame:figureFrame];
 //    figureView.backgroundColor = figure.color;
+    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
+    [figureView addGestureRecognizer:panGesture];
     return figureView;
 }
 
@@ -174,37 +179,10 @@ static CGSize kScrollViewContainerSize                  = {2040.0f, 2040.0f};
 #pragma mark - Touch Methods
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    [self.view endEditing:YES];
-    if ([touches count] == 1) {
-        UITouch *touch = [touches anyObject];
-        CGPoint touchPoint = [touch locationInView:self.containerView];
-        //        self.currentTouch = touchPoint;
-        
-        for (CRCustomFigureView *view in [self.containerView subviews]) {
-            if (CGRectContainsPoint(view.frame, touchPoint)) {
-                if ([view isKindOfClass:[CRCustomFigureView class]]) {
-                    [self unLightSelectedView];
-                    self.selectedView = view;
-                    [self lightSelectedView];
-                    return;
-                }
-            }
-        }
-    }
+    [self.containerView endEditing:YES];
 }
 
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-    UITouch *touch = [touches anyObject];
-    self.currentTouch = [touch locationInView:self.containerView];
-    self.selectedView.center = self.currentTouch;
-}
-
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    UITouch *touch = [touches anyObject];
-    self.currentTouch = [touch locationInView:self.containerView];
-}
-
-#pragma mark - Transform Views
+#pragma mark - Gesture Methods
 
 - (void)handlePinchGesture:(UIPinchGestureRecognizer *)recognizer {
     
@@ -218,6 +196,17 @@ static CGSize kScrollViewContainerSize                  = {2040.0f, 2040.0f};
     CGFloat scale = oldScale - (oldScale - recognizer.scale) + initialDifference;
     self.selectedView.transform = CGAffineTransformScale(self.view.transform, scale, scale);
     oldScale = scale;
+}
+
+
+- (void)handlePanGesture:(UIPanGestureRecognizer *)recognizer {
+    self.selectedView = recognizer.view;
+    CGPoint center = [recognizer locationInView:self.containerView];
+    self.selectedView.center = center;
+}
+
+- (void)handleTapGesture:(UITapGestureRecognizer *) recognizer {
+    [self.view endEditing:YES];
 }
 
 #pragma mark - UIScrollViewDelegate
