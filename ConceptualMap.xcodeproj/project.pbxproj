@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D6ECC88196B21D400A81111 /* CRBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6ECC87196B21D400A81111 /* CRBezierPath.m */; };
 		1D764CC91967114F00AA80B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D764CC81967114F00AA80B8 /* Foundation.framework */; };
 		1D764CCB1967114F00AA80B8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D764CCA1967114F00AA80B8 /* CoreGraphics.framework */; };
 		1D764CCD1967114F00AA80B8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D764CCC1967114F00AA80B8 /* UIKit.framework */; };
@@ -27,6 +26,8 @@
 		1D764D0F19671CC400AA80B8 /* WorkSpace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D764D0E19671CC400AA80B8 /* WorkSpace.storyboard */; };
 		1D764D1219671D1F00AA80B8 /* CRMapWorkSapceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D764D1119671D1F00AA80B8 /* CRMapWorkSapceViewController.m */; };
 		1D764D1519671EF600AA80B8 /* CRCustomFigureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D764D1419671EF600AA80B8 /* CRCustomFigureView.m */; };
+		1DBB95DB1972CFA400374629 /* CRCircleFigureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DBB95DA1972CFA400374629 /* CRCircleFigureView.m */; };
+		1DBB95DE1972CFCD00374629 /* CRSquareFigureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DBB95DD1972CFCD00374629 /* CRSquareFigureView.m */; };
 		A4870F5FF1EA4BF48ED44A53 /* libPods-ConceptualMap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BE39A5AC06451BAB0FC536 /* libPods-ConceptualMap.a */; };
 /* End PBXBuildFile section */
 
@@ -42,8 +43,6 @@
 
 /* Begin PBXFileReference section */
 		1807E661EEC14BC7B5BB325B /* Pods-ConceptualMap.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConceptualMap.xcconfig"; path = "Pods/Pods-ConceptualMap.xcconfig"; sourceTree = "<group>"; };
-		1D6ECC86196B21D400A81111 /* CRBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRBezierPath.h; sourceTree = "<group>"; };
-		1D6ECC87196B21D400A81111 /* CRBezierPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRBezierPath.m; sourceTree = "<group>"; };
 		1D764CC51967114F00AA80B8 /* ConceptualMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConceptualMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D764CC81967114F00AA80B8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D764CCA1967114F00AA80B8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -74,6 +73,10 @@
 		1D764D1119671D1F00AA80B8 /* CRMapWorkSapceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRMapWorkSapceViewController.m; sourceTree = "<group>"; };
 		1D764D1319671EF600AA80B8 /* CRCustomFigureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRCustomFigureView.h; sourceTree = "<group>"; };
 		1D764D1419671EF600AA80B8 /* CRCustomFigureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRCustomFigureView.m; sourceTree = "<group>"; };
+		1DBB95D91972CFA400374629 /* CRCircleFigureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRCircleFigureView.h; sourceTree = "<group>"; };
+		1DBB95DA1972CFA400374629 /* CRCircleFigureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRCircleFigureView.m; sourceTree = "<group>"; };
+		1DBB95DC1972CFCD00374629 /* CRSquareFigureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRSquareFigureView.h; sourceTree = "<group>"; };
+		1DBB95DD1972CFCD00374629 /* CRSquareFigureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRSquareFigureView.m; sourceTree = "<group>"; };
 		F9BE39A5AC06451BAB0FC536 /* libPods-ConceptualMap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConceptualMap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -217,8 +220,8 @@
 				1D764D0E19671CC400AA80B8 /* WorkSpace.storyboard */,
 				1D764D1319671EF600AA80B8 /* CRCustomFigureView.h */,
 				1D764D1419671EF600AA80B8 /* CRCustomFigureView.m */,
-				1D6ECC86196B21D400A81111 /* CRBezierPath.h */,
-				1D6ECC87196B21D400A81111 /* CRBezierPath.m */,
+				1DBB95E01972CFDB00374629 /* Circle */,
+				1DBB95DF1972CFD300374629 /* Square */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -252,6 +255,24 @@
 				1D764D0A1967199F00AA80B8 /* CRCircle.m */,
 			);
 			name = Figures;
+			sourceTree = "<group>";
+		};
+		1DBB95DF1972CFD300374629 /* Square */ = {
+			isa = PBXGroup;
+			children = (
+				1DBB95DC1972CFCD00374629 /* CRSquareFigureView.h */,
+				1DBB95DD1972CFCD00374629 /* CRSquareFigureView.m */,
+			);
+			name = Square;
+			sourceTree = "<group>";
+		};
+		1DBB95E01972CFDB00374629 /* Circle */ = {
+			isa = PBXGroup;
+			children = (
+				1DBB95D91972CFA400374629 /* CRCircleFigureView.h */,
+				1DBB95DA1972CFA400374629 /* CRCircleFigureView.m */,
+			);
+			name = Circle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,11 +410,12 @@
 				1D764D031967132B00AA80B8 /* CRFigure.m in Sources */,
 				1D764D001967120D00AA80B8 /* CRMap.m in Sources */,
 				1D764CD51967114F00AA80B8 /* main.m in Sources */,
-				1D6ECC88196B21D400A81111 /* CRBezierPath.m in Sources */,
 				1D764CD91967114F00AA80B8 /* CRAppDelegate.m in Sources */,
 				1D764D1519671EF600AA80B8 /* CRCustomFigureView.m in Sources */,
 				1D764D1219671D1F00AA80B8 /* CRMapWorkSapceViewController.m in Sources */,
 				1D764D0B1967199F00AA80B8 /* CRCircle.m in Sources */,
+				1DBB95DB1972CFA400374629 /* CRCircleFigureView.m in Sources */,
+				1DBB95DE1972CFCD00374629 /* CRSquareFigureView.m in Sources */,
 				1D764D071967164000AA80B8 /* CRSquare.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
